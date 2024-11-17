@@ -13,3 +13,33 @@
 # получить кортеж.
 # Помните что кортеж это неизменяемый тип данных, поэтому для
 # некоторых операций нужно создавать новый кортеж.
+from audioop import reverse
+
+liter_genres = ('Роман','Новелла','Фэнтези','Научная Фантастика')
+num_tuple = (3, 7, 9, 1, 6, 8, 2, 5, 4)
+
+# узнайте длину обоих кортежей (это количество элементов в них);
+print(len(liter_genres))
+print(len(num_tuple))
+
+# найдите максимальный и минимальный элемент;
+print(max(liter_genres))
+print(min(liter_genres))
+print(max(num_tuple))
+print(min(num_tuple))
+
+# просуммируйте элементы если это возможно;
+sum_genre = ''
+for genre in liter_genres:
+    sum_genre += genre
+print(sum_genre)
+print(sum(num_tuple))
+
+# отсортируйте элементы по возрастанию и убыванию в
+# результате сортировки и последующих операций необходимо
+# получить кортеж.
+
+print(f'Сортировка по возрастанию-{tuple(sorted(liter_genres))}')
+print(f'Сортировка по убыванию-{tuple(sorted(liter_genres, reverse=True))}')
+print(f'Сортировка по возрастанию-{tuple(sorted(num_tuple))}')
+print(f'Сортировка по убыванию-{tuple(sorted(num_tuple, reverse=True))}')
